@@ -1,0 +1,126 @@
+--------------------------CSS--------------------------
+#ruleta{
+    overflow: hidden;
+    width: 100vw;
+    margin-top: 1em;
+}
+
+#texto_arriba_imagenes{
+    width: 4000px;
+    font-size: 1.7em;
+    animation: movimiento_hacia_izquierda;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+#texto_abajo_imagenes{
+    width: 4000px;
+    font-size: 1.7em;
+    animation: movimiento_hacia_derecha;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes movimiento_hacia_izquierda {
+    0%{
+        transform: translateX(0%);
+    }
+    
+    100%{
+        transform: translateX(-33.4%);
+    }
+}
+
+@keyframes movimiento_hacia_derecha {
+    0%{
+        transform: translateX(-33.4%);
+    }
+    
+    100%{
+        transform: translateX(0%);
+    }
+}
+#ruleta_imagenes{
+    display: flex;
+    width: 200vw;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    animation-name: movimiento_hacia_derecha;
+    animation-duration: 13s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.contenedor_imagen{
+    border: solid red 1px;
+    width: 14em;
+    height: 20em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen{
+    width: 40em;
+}
+
+------------------Fin CSS--------------------------
+
+<section id="ruleta">
+            <div id="texto_arriba_imagenes">
+                <span>
+                    Videojuegos ● Programación ● Volleyball ● Robótica ● Videojuegos ● Programación ● Volleyball ● Robótica ● Videojuegos ● Programación ● Volleyball ● Robótica ● Videojuegos ● Programación ● Volleyball ● Robótica ● Videojuegos ● Programación ● Volleyball ● Robótica
+                </span>
+            </div>
+            <div id="ruleta_imagenes">
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://images5.alphacoders.com/726/726634.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://www.freecodecamp.org/news/content/images/2022/03/comments-python.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://images4.alphacoders.com/721/721397.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://i.blogs.es/3f15c2/valorant/1366_2000.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2021/03/evil-within-2260357.jpg?tf=3840x" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://wallpapercave.com/wp/wp2073962.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://i.pinimg.com/originals/dd/53/d2/dd53d2619e935cded62b9791cd92f809.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://images5.alphacoders.com/726/726634.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://www.freecodecamp.org/news/content/images/2022/03/comments-python.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://images4.alphacoders.com/721/721397.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://i.blogs.es/3f15c2/valorant/1366_2000.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2021/03/evil-within-2260357.jpg?tf=3840x" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://wallpapercave.com/wp/wp2073962.jpg" alt="">
+                </div>
+                <div class="contenedor_imagen">
+                    <img class="imagen" src="https://i.pinimg.com/originals/dd/53/d2/dd53d2619e935cded62b9791cd92f809.jpg" alt="">
+                </div>
+            </div>
+            <div id="texto_abajo_imagenes"> 
+                <span>Videojuegos ● Programación ● Volleyball ● Robótica ● Videojuegos ● Programación ● Volleyball ● Robótica ● Videojuegos ● Programación ● Volleyball ● Robótica ● Videojuegos ● Programación ● Volleyball ● Robótica ● Videojuegos ● Programación ● Volleyball ● Robótica</span>
+            </div>
+        </section>

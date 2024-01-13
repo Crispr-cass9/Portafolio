@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    background-color: #0a0a0a;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor_casa{
+    background-color: transparent;
+    top: 0rem;
+    left: 0;
+    height: 4em;
+    width: 4em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+#contenedor_casa:hover{
+    transform: scale(1.1);
+}
+
+.fa-house{
+    font-size: 2em;
+}
+
+#principal{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+model-viewer{
+    width: 60vw;
+    height: 100vh;
+}
+
+#formulario{
+    width: 40vw;
+    height: 100vh;
+    border: solid blue 1px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#formulario h1 {
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 2em;
+}
+
+.contenedor_input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30em;
+    height: 5em;
+}
+
+.input{
+    border: none;
+    border-bottom: 0.1rem solid rgba(68, 0, 255, 0.8);
+    background-color: transparent;
+    padding: 1em;
+    width: 15em;
+    height: 1em;
+    z-index: 30;
+
+}
+
+.texto_acompañante{
+    position: absolute;
+    transition: all 0.3s;
+    color: #0a0a0a84;
+    font-weight: 600;
+}
+
+.mantener{
+    transform: translateY(-2rem);
+    color: #0092af;
+}
+
+#area_mensaje{
+    resize: inherit;
+    height: 12em;
+    padding: 1em;
+    border-radius: 0.5rem;
+    border: 2px rgba(68, 0, 255, 0.8) solid;
+    
+}
+
+#btn{
+    margin-top: 1em;
+    font-size: 1.3em;
+    padding: 0.3em 1.2em;
+    border-radius: 3rem;
+    background-color: transparent;
+    border: solid 2px rgba(32, 3, 114, 0.8);
+    transition: all 0.3s;
+}
+
+#btn:hover{
+    transform: scale(1.1);
+}

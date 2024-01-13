@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./estilos_contacto.css">
+    <!-- Inicio Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fin font awesome -->
+    <!-- Inicio Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nunito+Sans:opsz,wght@6..12,700;6..12,800&family=Nunito:wght@300;400;700;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Fin Google Fonts -->
+</head>
+<body>
+    <header>
+        <div id="contenedor_casa">
+            <a href="../Index.html">
+                <i class="fa-solid fa-house" style="color: #9a9a9a;"></i>
+            </a>
+        </div>
+    </header>
+    <section id="principal">
+        <form id="formulario">
+            <h1>Formulario de contacto</h1>
+            <div class="input_nombre contenedor_input">
+                <input type="text" class="input">
+                <span class="texto_acompañante">Nombre</span>
+            </div>
+            <div class="input_apellido contenedor_input">
+                <input type="text" class="input">
+                <span class="texto_acompañante">Apellido</span>
+            </div>
+            <div class="input_email contenedor_input">
+                <input type="email" class="input">
+                <span class="texto_acompañante">E-mail</span>
+            </div>
+            <textarea id="area_mensaje" cols="30" rows="20"></textarea>
+            <button id="btn" type="submit">Enviar</button>
+        </form>
+        <model-viewer src="../src/gaming_laptop.glb" camera-orbit="45deg 80deg 8m" camera-controls poster="poster.webp" shadow-intensity="1.66" shadow-softness="0.81">
+        </model-viewer>
+    </section>
+    
+    <script src="scrip_contacto.js"></script>
+    <!-- Inicio model viewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    <!-- Fin model viewer -->
+</body>
+</html>

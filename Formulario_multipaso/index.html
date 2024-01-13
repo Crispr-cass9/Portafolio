@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Multi-step form</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+</head>
+<body>
+  <!-- Sidebar start -->
+  <section id="contenedor_formulario">
+    <aside id="barra_lateral">
+      <div id="contenedor_numeros">
+        <span class="numero paso_actual">1</span>
+        <span class="numero">2</span>
+        <span class="numero">3</span>
+        <span class="numero">4</span>
+      </div>
+
+      <div id="contenedor_texto_pasos">
+        <div>
+            <span class="indicacion_pasos">Paso 1</span>
+            <span class="informacion_pasos">TU INFORMACIÓN</span>
+        </div>
+
+        <div>
+          <span class="indicacion_pasos">Paso 2</span>
+          <span class="informacion_pasos">SUSCRIPCIÓN</span>
+        </div>
+
+        <div>
+          <span class="indicacion_pasos">Paso 3</span>
+          <span class="informacion_pasos">EXTRAS</span>
+        </div>
+
+        <div>
+          <span class="indicacion_pasos">Paso 4</span>
+          <span class="informacion_pasos">CONFIRMACIÓN</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <div id="contenedor_formulario_info">
+      <h1 class="titulo">Información personal</h1>
+      <h3 class="subtitulo">Ingresa tu nombre, dirección de correo y telefono.</h3>
+      
+      <form id="formulario_info">
+
+        <div class="contenedor_input">
+          <div>
+            <label for="nombre">Nombre y apellido</label>
+            <span id="entrada_nombre">Rellene correctamente</span>
+          </div>
+
+          <div class="contenedor_input_icono">
+            <input id="nombre" type="text" placeholder="Stephen King" maxlength="100">
+            <i id="icono_error_nombre" class="fa-solid fa-circle-xmark" style="color: #ef3447;"></i>  
+          </div>
+        </div>
+
+        <div class="contenedor_input">
+          <div>
+            <label for="email">Email</label>
+            <span id="entrada_email">Rellene correctamente</span>
+          </div>
+          <div class="contenedor_input_icono">
+            <input id="email" type="email" placeholder="Stephenking@lorem.com" maxlength="75">
+            <i id="icono_error_email" class="fa-solid fa-circle-xmark" style="color: #ef3447;"></i>  
+          </div>
+        </div>
+
+        <div class="contenedor_input">
+          <div>
+            <label for="numero">Número telefónico</label>
+            <span id="entrada_numero">Rellene correctamente</span>
+          </div>
+          <div class="contenedor_input_icono">
+            <input id="numero" type="num" placeholder="+34123456789" required maxlength="17" onkeypress="return (event.charCode >= 48 && event.charCode <= 57 || event.charCode == 43 || event.charCode == 32)">
+            <i id="icono_error_numero" class="fa-solid fa-circle-xmark" style="color: #ef3447;"></i>  
+          </div>
+        </div>
+        
+      
+        
+      </form>
+
+      <div class="contenedor_boton_pc">
+        <button class="btn_volver">Volver</button>
+        <button form="formulario_info" class="btn_siguiente" type="submit">Siguiente</button>
+      </div>
+
+    </div>
+
+    <div id="contenedor_formulario_suscripcion">
+      <h1 class="titulo">Selecciona un plan</h1>
+      <h3 class="subtitulo">Tienes la opcion mensual o anual</h3>
+
+      <div class="contenedor_planes">
+
+        <article class="planes">
+
+          <img src="./assets/images/icon-arcade.svg" alt="">
+          <div class="contenedor_texto_planes">
+            <span class="nombre_plan">Arcade</span>
+            <span class="precio_plan">$9/mes</span>
+            <span class="oferta">¡2 meses gratis!</span>
+
+          </div>
+
+        </article>
+
+        <article class="planes">
+
+          <img src="./assets/images/icon-advanced.svg" alt="">
+          <div class="contenedor_texto_planes">
+            <span class="nombre_plan">Advanced</span>
+            <span class="precio_plan">$12/mes</span>
+            <span class="oferta">¡2 meses gratis!</span>
+          </div>
+
+        </article>
+
+        <article class="planes">
+
+          <img src="./assets/images/icon-pro.svg" alt="">
+          <div class="contenedor_texto_planes">
+            <span class="nombre_plan">Pro</span>
+            <span class="precio_plan">$15/mes</span>
+            <span class="oferta">¡2 meses gratis!</span>
+
+          </div>
+
+        </article>
+
+      </div>
+      
+      <div id="mensual_anual">
+        <span class="texto_mensual checkeado">Mensual</span>
+        <div id="contenedor_inputRadio">
+          <div id="bola_input_radio">
+          </div>
+        </div>
+        <span class="texto_anual">Anual</span>
+      </div>
+
+      <div class="contenedor_boton_pc">
+        <button class="btn_volver">Volver</button>
+        <button form="formulario_info" class="btn_siguiente" type="submit">Siguiente</button>
+      </div>
+
+    </div>
+
+    <div id="contenedor_formulario_extras">
+      <h1 class="titulo">Selecciona add-ons</h1>
+      <h3 class="subtitulo">Los add-ons mejoran tu experiencia de usuario</h3>
+
+      <div class="contenedor_de_extras">
+        <div class="servicio_online extra">
+          <input type="checkbox" id="check_online">
+          <div class="texto_extra">
+            <span>servicio online</span>
+            <span>Acceso al multijugador</span>
+          </div>
+          <div class="precio">+$1/mes</div>
+        </div>
+      </div>
+
+      <div class="almacenamiento_grande extra">
+        <input type="checkbox" id="check_almacenamiento">
+        <div class="texto_extra">
+          <span>Almacenamiento grande</span>
+          <span>1 TB Extra de almacenamiento en la nube</span>
+        </div>
+        <div class="precio">+$2/mes</div>
+      </div>
+
+      <div class="perfil_custom extra">
+        <input type="checkbox" id="check_perfil">
+        <div class="texto_extra">
+          <span>Perfil personalizable</span>
+          <span>Skins exclusivas para tu perfil</span>
+        </div>
+        <div class="precio">+$2/mes</div>
+      </div>
+
+    </div>
+    
+      <div class="contenedor_boton_movil">
+        <button class="btn_volver">Volver</button>
+        <button form="formulario_info" class="btn_siguiente" type="submit">Siguiente</button>
+      </div>
+
+  
+  </section>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

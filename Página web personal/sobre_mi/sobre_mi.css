@@ -1,0 +1,455 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+
+html{
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    
+}
+#contenedor_casa{
+    background-color: transparent;
+    height: 4em;
+    width: 4em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.fa-house{
+    font-size: 2em;
+}
+
+#contenedor_casa:hover{
+    transform: scale(1.1);
+}
+
+
+#principal{
+    overflow-x: hidden;
+    height: 2100px;
+}
+
+#titulo{
+    overflow: hidden;
+    animation-name: aparicion;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+.animar_titulo{
+    display: inline block;
+    height: 1.5em;
+    overflow: hidden; 
+}
+
+@keyframes aparicion {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.menus_permanentes{
+    text-decoration: none;
+    color: white;
+    padding: 2em;
+    
+}
+header{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+#menu_superior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu_inferior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#titulo{
+    height: 100vh;
+    width: 100vw;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+
+#texto_titulo{
+    font-size: 1.8em;
+    width: 60%;
+    text-align: center;
+}
+
+.fa-gear{
+    animation: rotacion;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotacion {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* Inicio animación máquina de escribir */
+#contenedor_animacion_texto_saludo{
+    font-size: 0.4em;
+}
+
+.texto_animado_maquina{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+/* Fin animación máquina de escribir */
+
+/* Inicio animación de texto giratorio (Redondeado) */
+
+#contenedor_animacion_sigue{
+    transform: translateY(1.7em);
+    position: relative;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+
+}
+
+#texto_redondeado{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9em;
+    height:9em;
+    font-size: 0.3em;
+    transform-origin: center center;
+    animation-name: rotacion;
+    animation-duration: 13s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotacion {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#contenedor_animacion_sigue:hover{
+    transform: translateY(1.7em) scale(1.1);
+
+}
+
+
+#texto_redondeado span{
+    position: absolute;
+    height: 10em;
+    width: 10em;
+    text-align: center;
+    font-size: 0.8em;
+}
+/* Fin animación de texto giratorio (Redondeado) */
+
+#contenedor_columnas_datos{
+    width: 98vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#datos_izquierda{
+    margin-top: 10em;
+    width: 49%;
+    padding: 0em 1.5em;
+}
+
+#datos_derecha{
+    margin-top: 10em;
+    width: 49%;
+    padding: 0em 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_datos{
+    width: 97%;
+    border-radius: 1em;
+    background-color: rgba(206, 206, 206, 0.08);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em;
+}
+
+.almohadilla{
+    border: 1px solid rgba(255, 255, 255, 0.434);
+    background-color: rgba(206, 206, 206, 0.08);
+    width: 7em;
+    height: 2em;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contenido_datos{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+.letra{
+    color: rgba(255, 255, 255, 0.449);
+    font-family: 'Nunito', sans-serif;
+}
+.iniciar_animacion_almohadilla{
+    display: inline-block;
+    animation-name: animacion_almohadilla;
+    animation-duration: 0.2s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+}
+@keyframes animacion_almohadilla {
+    0%{
+        color: rgba(255, 255, 255, 0.31);
+        transform: translateY(100%);
+    }
+
+    100%{
+        color: #00b4d8;
+        transform: translateY(0%);
+    }
+}
+
+.quitar_animacion_almohadilla{
+    animation-name: quitar_almohadilla;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    transition: all 1s;
+}
+@keyframes quitar_almohadilla {
+    0%{
+        color: #00b4d8;
+    }
+    100%{
+        color: rgba(255, 255, 255, 0.311);
+    }
+}
+
+#datos_sobre_mi > .almohadilla{
+    margin-bottom: 1em;
+}
+
+#pasa_tiempos > .almohadilla{
+    width: 9em;
+    margin-bottom: 1em;
+}
+
+#almohadilla_albumes{
+    width: 10em;
+}
+
+.contenedor_albumes{
+    max-width: 40rem;
+}
+
+.tranding-slider{
+    height: 19rem;
+    position: relative;
+}
+
+.diapositiva_album{
+    max-width: 15rem;
+    height: 15rem;
+    position: relative;
+}
+
+.diapositiva_album .diapositiva_album-img img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.diapositiva_album .diapositiva_album-content{
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 15em;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transform: translateY(-3.45em);
+    background-color: #0a0a0a6a;
+}
+
+.nombre_album{
+    text-align: center;
+    color: #00b4d8;
+    font-weight: bold;
+}
+.nombre_artista{
+    text-align: center;
+    color: #1f7f92;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+#pasa_tiempos{
+    margin-top: 1em;
+}
+
+#videojuegos{
+    margin-top: 1em;
+    position: relative;
+    height: 28em;
+    display: flex;
+}
+
+.contenido_datos_juegos{
+    justify-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.juegos_img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 2rem;
+    transition: all 1s;
+    
+}
+.juego_central{
+    z-index: 10;
+}
+.juego_izquierda{
+    position: absolute;
+    transform-origin: 10em 35em;
+    rotate: -25deg;
+}
+
+.juego_derecha{
+    position: absolute;
+    transform-origin: 10em 35em;
+    rotate: 25deg;
+}
+
+#videojuegos:hover .juegos_img{
+    transform: scale(1.1);
+}
+
+#informacion_personal{
+    margin-top: 1em;
+}
+
+.almohadilla_informacion_personal{
+    width: 12em;
+}
+
+#informacion_personal .contenido_datos{
+    margin: 2em;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#informacion_personal .contenido_datos h3{
+    font-size: 0.9em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+#otros_gustos{
+    margin-top: 1em;
+}
+
+.almohadilla_otros_gustos{
+    width: 8em;
+    
+}
+
+.contenido_datos_otros_gustos{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5em;
+    justify-content: space-around;
+}
+
+.icono_otros_gustos{
+    font-size: 2em;
+    margin-right: 1em;
+    width: 50px;
+}
+
+.contenedor_icono_texto{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1em;
+    width: 10em;
+}
+
+.contenedor_icono_texto span{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+model-viewer{
+    width: 100%;
+    height: 27rem;
+}

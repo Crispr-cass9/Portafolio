@@ -1,0 +1,655 @@
+:root{
+    --Marineblue: hsl(213, 96%, 18%);
+    --Purplish_blue: hsl(243, 100%, 62%);
+    --Pastel_blue: hsl(228, 100%, 84%);
+    --Light_blue: hsl(206, 94%, 87%);
+    --Strawberry_red: hsl(354, 84%, 57%);
+    --Cool_gray: hsl(231, 11%, 63%);
+    --Light_gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    margin:0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    user-select: none;
+}
+
+#contenedor_formulario{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Alabaster);
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    overflow: hidden;
+}
+
+#barra_lateral{
+    background-image: url('./assets/images/bg-sidebar-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor_numeros{
+    margin-top: 5vh;
+    height: fit-content;
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.numero{
+    border: solid var(--White) 1px;
+    color: var(--White);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.paso_actual{
+    background-color: var(--Light_blue);
+    border-color: var(--Light_blue);
+    color: var(--Marineblue);
+}
+
+#contenedor_texto_pasos{
+    display: none;
+}
+
+#contenedor_formulario_info{
+    position: absolute;
+    top: 15vh;
+    height: 65vh;
+    width: 93vw;
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    box-shadow: 0 7px 10px 8px rgba(0, 0, 0, 0.184);
+}
+
+.titulo{
+    color: var(--Marineblue);
+    font-size: 1.2em;
+    margin-top: 1vh;
+}
+
+.subtitulo{
+    color: var(--Cool_gray);
+    font-size: 0.7em;
+    width: 85%;
+    margin-top: 1vh;
+}
+
+#formulario_info{
+    margin-top: 1vh;
+}
+
+.contenedor_input{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.contenedor_input div label{
+    color: var(--Marineblue);
+    font-size: 0.8em;
+}
+.contenedor_input div span{
+    display: none;
+}
+
+.contenedor_input_icono{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.fa-circle-xmark{
+    position: absolute;
+    visibility: hidden;
+    right: 8%;
+}
+
+.contenedor_input_icono input{
+    border: solid var(--Light_gray) 1px;
+    border-radius: 0.2rem;
+    height: 6vh;
+    width: 100%;
+    background-color: var(--White);
+}
+
+.contenedor_input_icono input:focus{
+    border: none;
+    outline: 2px var(--Marineblue) solid;
+}
+.attribution{
+    display: none;
+}
+
+.contenedor_boton_pc{
+    display: none;
+}
+
+.contenedor_boton_movil{
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--White);
+}
+
+.btn_siguiente{
+    background-color: var(--Marineblue);
+    padding: 1.5vh 1rem;
+    color: var(--White);
+    font-weight: 500;
+    border-radius: 0.3rem;
+    transition: .5s;
+}
+
+.btn_volver{
+    background-color: var(--White);
+    margin-left: 5%;
+    color: var(--Cool_gray);
+    font-weight: 500;
+    visibility: hidden;
+}
+
+.btn_siguiente:hover{
+    filter: brightness(1.5);
+}
+
+
+.mostrar{
+    visibility: visible !important;
+    display: block !important;
+}
+
+.input_invalido{
+    outline: var(--Strawberry_red) 2px solid !important;
+}
+
+
+/* Código Sección del plan */
+
+#contenedor_formulario_suscripcion{
+    position: absolute;
+    top: 15vh;
+    height: 65vh;
+    width: 93vw;
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: none;
+    flex-flow: column nowrap;
+    box-shadow: 0 7px 10px 8px rgba(0, 0, 0, 0.184);
+}
+
+.contenedor_planes{
+    margin-top: 4vh;
+    height: 35vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.planes{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    border: solid var(--Light_gray) 1px;
+    border-radius: 0.5rem;
+    padding: 1vh 2vw;
+    cursor: pointer;
+
+}
+
+.planes img{
+    height: 5vh;
+    padding-right: 4vw;
+}
+
+.contenedor_texto_planes{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.nombre_plan{
+    color: var(--Marineblue);
+    font-size: 2.6vh;
+}
+
+.precio_plan{
+    color: var(--Cool_gray);
+    font-size: 2vh;
+}
+
+.oferta{
+    font-size: 2vh;
+    color: var(--Marineblue);
+    transition: all .6s;
+    display: none;
+}
+
+#mensual_anual{
+    display: flex;
+    margin-top: 2vh;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    height: 9vh;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--Alabaster);
+    font-weight: 500;
+    color: var(--Cool_gray);
+    cursor: pointer;
+}
+
+#contenedor_inputRadio{
+    position: relative;
+    width: 15vw;
+    border-radius: 2rem;
+    height: 5vh;
+    background-color: var(--Marineblue);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#bola_input_radio{
+    position: absolute;
+    height: 6vw;
+    width: 6vw;
+    background-color: var(--White);
+    border-radius: 50%;
+    transition: .6s;
+    transform-origin: center center;
+    transform: translate(1vw);
+}
+
+.mover_bola{
+    transform: translateX(7.9vw) !important;
+}
+
+.checkeado{
+    color: var(--Marineblue);
+}
+
+.plan_seleccionado{
+    background-color: var(--Alabaster);
+    border-color: var(--Purplish_blue);
+}
+
+/*Inicio de menu de add-ons (Extras)*/
+#contenedor_formulario_extras{
+    position: absolute;
+    top: 15vh;
+    height: 65vh;
+    width: 93vw;
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: block;
+    flex-flow: column nowrap;
+    box-shadow: 0 7px 10px 8px rgba(0, 0, 0, 0.184);
+}
+
+.contenedor_de_extras{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.extra{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.texto_extra{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+@media (min-height:650px) {
+    #contenedor_formulario_info{
+        top: 18vh;
+        height: 62vh;
+    }
+
+    .numero{
+        width: 5vh;
+        height: 5vh;
+    }
+
+    .titulo{
+        color: var(--Marineblue);
+        font-size: 1.8em;
+        margin-top: 1.5vh;
+    }
+    
+    .subtitulo{
+        color: var(--Cool_gray);
+        font-size: 1em;
+        width: 90%;
+        margin-top: 1.5vh;
+    }
+
+    #formulario_info{
+        margin-top: 4vh;
+    }
+
+    .contenedor_input div label{
+        color: var(--Marineblue);
+        font-size: 1.2em;
+    }
+
+    .contenedor_input_icono{
+        margin-top: 1vh;
+    }
+    .contenedor_input_icono input{
+        height: 6vh;
+        width: 100%;
+        background-color: var(--White);
+        font-size: 2vh;
+        font-weight: 500;
+        padding-inline-start: 1rem;
+        padding-inline-end: 5rem;
+    }
+
+    .fa-circle-xmark{
+        font-size: 3vh;
+        display: hidden;
+    }
+
+    #contenedor_formulario_suscripcion{
+        top: 18vh;
+        height: 62vh;
+    }
+
+    .nombre_plan{
+        font-size: 2.6vh;
+    }
+
+    .planes{
+        height: 11vh;
+    }
+
+    .contenedor_texto_planes{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 0.5vh;
+    }
+
+    #mensual_anual{
+        font-size: 2.3vh;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1040px) {
+    body{
+        height: 100vh;
+        background-color: var(--Alabaster);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contenedor_formulario{
+        width: 60vw;
+        height: 70vh;
+        background-color: var(--White);
+        display: flex;
+        flex-direction: row;
+        padding: 1vh;
+        border-radius: 0.7rem;
+        box-shadow: 0 2rem 4rem 10px rgba(0, 0, 0, 0.207);
+    }
+    #barra_lateral{
+        background-image: url('./assets/images/bg-sidebar-desktop.svg');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100%;
+        width: 35%;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    
+    #contenedor_numeros{
+        flex-flow: column nowrap;
+        width: fit-content;
+        height: 30vh;
+        margin: 0 1vh 20vh 2vw;
+    }
+
+    
+    #contenedor_texto_pasos{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 30vh;
+        justify-content: space-around;
+        margin: 0 1vh 20vh 0;
+    }
+    
+    #contenedor_texto_pasos div{
+        display: flex;
+        flex-flow: column nowrap;
+        width: fit-content;
+    }
+    
+    .indicacion_pasos{
+        color: var(--Light_gray);
+    }
+
+    .informacion_pasos{
+        color: var(--White);
+        font-weight: 500;
+    }
+
+    #contenedor_formulario_info{
+        width: 65%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        box-shadow: none;
+        padding: 2rem;
+    }
+
+    .titulo{
+        font-size: 4vh;
+        margin-top: 0;
+    }
+    .subtitulo{
+        font-size: 2vh;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    .contenedor_input div{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    .contenedor_input div span{
+        color: var(--Strawberry_red);
+        font-weight: 500;
+        font-size: 2vh;
+    }
+
+    .contenedor_input div label{
+        font-size: 2vh;
+    }
+
+    .contenedor_input_icono{
+        position: relative;
+    }
+
+    .contenedor_input_icono input{
+        border-radius: 0.7rem;
+    }
+
+    .contenedor_boton_movil{
+        display: none;
+    }
+
+    .contenedor_boton_pc{
+        display: flex;
+        justify-content: space-between;
+        width: 96%;
+        align-self: flex-end;
+        position: absolute;
+        bottom: 5%;
+    }
+
+    .btn_siguiente{
+        background-color: var(--Marineblue);
+        padding: 1rem 1rem;
+        color: var(--White);
+        font-weight: 500;
+        border-radius: 0.5rem;
+        transition: .5s;
+        font-size: 1rem;
+    }
+
+    .btn_volver{
+        background-color: var(--White);
+        margin-left: 5%;
+        color: var(--Cool_gray);
+        font-weight: 500;
+        visibility: hidden;
+    }
+    
+    .contenedor_boton_pc button:hover{
+        filter: brightness(1.5);
+    }
+
+    .mensaje_invalido{
+        display: block !important;
+    }
+
+    .fa-circle-xmark{
+        position: absolute;
+        right: 4%;
+        visibility: hidden;
+    }
+
+    /* Segunda parte del formulario */
+
+    #contenedor_formulario_suscripcion{
+        width: 65%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        box-shadow: none;
+        padding: 2rem;
+    }
+
+
+    #bola_input_radio{
+        height: 4vh;
+        width: 4vh;
+    }
+
+
+    .contenedor_planes{
+        display: flex;
+        flex-flow: row nowrap;
+        height: fit-content;
+    }
+
+    .planes{
+        height: 20vh;
+        width: 10.4vw;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1vh 0 0 1vw;
+        height: fit-content;
+    }
+
+    .planes img{
+        height: 7vh;
+    }
+
+    .contenedor_texto_planes{
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 10vh;
+        margin-bottom: 1vh;
+    }
+
+    #contenedor_inputRadio{
+        width: 5vw;
+        height: 4vh;
+    }
+
+    #bola_input_radio{
+        height: 3vh;
+        width: 3vh;
+        transform: translateX(0.3vw);
+    }
+
+    .mover_bola{
+        transform: translateX(3.2vw) !important;
+    }
+    
+
+}
+
+#contenedor_formulario_info{
+    display: none;
+}
+
+#contenedor_formulario_suscripcion{
+    display: none;
+}

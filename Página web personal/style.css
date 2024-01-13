@@ -1,0 +1,507 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+html{
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a;
+}
+
+#pantalla_principal{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.animacion_nombre{
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#nombre{
+    font-size: 10em;
+    font-weight: bold;
+    height: 1.3em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#nombre .letra{
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    animation-name: animacion_nombre;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+#nombre .c{
+    animation-delay: 0s;
+}
+#nombre .r{
+    animation-delay: 0.1s;
+}
+#nombre .primera_i{
+    animation-delay: 0.2s;
+}
+#nombre .s{
+    animation-delay: 0.3s;
+}
+#nombre .t{
+    animation-delay: 0.4s;
+}
+#nombre .segunda_i{
+    animation-delay: 0.5s;
+}
+#nombre .a{
+    animation-delay: 0.6s;
+}
+#nombre .n{
+    animation-delay: 0.7s;
+}
+
+@keyframes animacion_nombre {
+    0%{
+        transform: translateY(100%);
+    }
+    20%{
+        transform: translateY(0%);
+    }
+    80%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+#apellido{
+    font-size: 10em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    height: 1.3em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: -0.4em;
+}
+
+#apellido .letra{
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    animation-name: animacion_apellido;
+    animation-duration: 1.5s;
+    animation-delay: 0.2;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+}
+
+@keyframes animacion_apellido {
+    0%{
+        transform: translateY(100%);
+    }
+    20%{
+        transform: translateY(0%);
+    }
+    80%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+#apellido .m{
+    animation-delay: 0.4s;
+}
+#apellido .u{
+    animation-delay: 0.5s;
+}
+#apellido .letra_especial{
+    animation-delay: 0.6s;
+}
+#apellido .o{
+    animation-delay: 0.7s;
+}
+#apellido .z{
+    animation-delay: 0.8s;
+}
+
+#menu_navegacion{
+    position: relative;
+    z-index: 20;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    animation-name: introduccion;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+    transform: translateY(110%);
+}
+@keyframes introduccion {
+    0%{
+        transform: translateY(110%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+
+
+#menu_superior{
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 50%;
+    padding: 1em 1em 1em 0.5em;
+    gap: 1em;
+}
+
+#sobre_mi{
+    width: 35%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 0 1.5em 1.5em;
+    transition: background-color .5s;
+}
+
+#sobre_mi:hover{
+    background-color: rgba(255, 255, 255, 0.236);
+}
+#contacto:hover{
+    background-color: rgba(255, 255, 255, 0.236);
+}
+#otros_trabajos:hover{
+    background-color: rgba(255, 255, 255, 0.236);
+}
+#esta_web:hover{
+    background-color: rgba(255, 255, 255, 0.236);
+}
+#redes:hover{
+    background-color: rgba(255, 255, 255, 0.236);
+}
+#especial:hover{
+    background-color: rgba(255, 255, 255, 0.236);
+}
+#contacto{
+    width: 65%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 0 1.5em 1.5em;
+    transition: background-color .5s;
+}
+
+#menu_inferior{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 50%;
+    padding: 0.5em 1em 1em 1em;
+    gap: 1em;
+}
+
+#otros_trabajos{
+    width: 20%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 0 1.5em 1.5em;
+}
+
+#esta_web{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 0 1.5em 1.5em;
+}
+
+#redes_y_especial{
+    width: 30%;
+    height: 100%;
+    border-radius: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+}
+
+#redes{
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 0 1.5em 1.5em;
+}
+
+#especial{
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 0 1.5em 1.5em;
+}
+
+
+/* Animaciones del fondo  */
+
+#fondo_sobre_mi{
+    position: absolute;
+    font-size: 15em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    height: 1.3em;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    margin-top: -0.4em;
+    
+}
+
+#fondo_sobre_mi .letra{
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+
+}
+
+#fondo_contacto{
+    position: absolute;
+    font-size: 15em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    height: 1.3em;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    margin-top: -0.4em;
+    
+}
+
+#fondo_contacto .letra{
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+
+}
+#fondo_otros_trabajos{
+    position: absolute;
+    font-size: 15em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    height: 1.3em;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    margin-top: -0.4em;
+}
+
+#fondo_otros_trabajos .letra{
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#fondo_esta_web{
+    position: absolute;
+    font-size: 9em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    height: 1.3em;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    margin-top: -0.4em;
+    
+}
+
+#fondo_redes .letra{
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+
+}
+#fondo_redes{
+    position: absolute;
+    font-size: 13em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    height: 1.3em;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    margin-top: -0.4em;
+    
+}
+
+#fondo_redes .letra{
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+
+}
+
+#fondo_especial{
+    position: absolute;
+    font-size: 13em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    height: 1.3em;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    margin-top: -0.4em;
+    
+}
+
+#fondo_especial .letra{
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+
+}
+
+.iniciar_animacion{
+    animation-name: animacion_letras;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+    transition: all 1s;
+}
+
+@keyframes animacion_letras {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.quitar_letras{
+    animation-name: quitar_letras;
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+    transition: all 1s;
+}
+@keyframes quitar_letras {
+    0%{
+        color: white;
+    }
+
+    50%{
+        color: #00b4d8;
+        opacity: 1;
+    }
+    100%{
+        color: #00b4d8;
+        opacity: 0;
+    }
+}
+
+.iniciar_animacion_menu{
+    animation-name: animacion_letras_menu;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    transition: all 1s;
+}
+@keyframes animacion_letras_menu {
+    0%{
+        color: white;
+    }
+    50%{
+        
+    }
+    100%{
+        color: #00b4d8;
+    }
+}
+
+.quitar_animacion_menu{
+    animation-name: quitar_letras_menu;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    transition: all 1s;
+}
+@keyframes quitar_letras_menu {
+    0%{
+        color: #00b4d8;
+    }
+
+    50%{
+        
+    }
+    100%{
+        color: white;
+    }
+}
+
+.menu_seleccionado{
+    animation-name: quitar_menu;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes quitar_menu {
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
