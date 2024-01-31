@@ -1,0 +1,108 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+body{
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+header{
+    width: 100vw;
+}
+
+.logo{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    height: 20vh;
+}
+
+nav{
+    width: 100%;
+    background-color: #EDEDED;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 160px;
+    font-weight: 400;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 11vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #EDEDED;
+}
+
+.btn_ver{
+    background-color: #14C9E1;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9vw;
+    padding: 0 10px;
+    border-radius: 40px;
+    transition: .3s;
+}
+
+.btn_ver:hover{
+    filter: brightness(.9);
+}
+
+.fa-instagram{
+    font-size: 30px;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+#contenedor_img_lorem{
+    width: 100vw;
+    height: 59vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+#contenedor_img_lorem p{
+    width: 65vw;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+img{
+    width: 13vw;
+}

@@ -1,0 +1,170 @@
+@media screen and (max-width:768px){
+
+
+    body{
+        height: 170vh;
+        overflow-y: scroll;
+    }
+
+    #imagen_superior img{
+        height: 20vh;
+        overflow: hidden;
+    }
+
+    #contenedor_perfil_form{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 80vh;
+    }
+
+    #perfil{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    #perfil img{
+        height: 20vh;
+        width: 20vh;
+    }
+
+    .texto_perfil{
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        height: 15vh;
+    }
+
+    #descripcion{
+        text-align: center;
+        width: 80vw;
+    }
+    #formulario{
+        padding: 0;
+        margin: 7vh 0 0 0;
+        width: 90vw;
+        height: 60vh;
+    }
+
+    #boton{
+        margin-top: 7vh;
+        align-self: center;
+    }
+
+    #texto_entrada{
+        margin-top: 7vh;
+        padding-top: 7vh;
+    }
+
+    #foto_post{
+        width: 7vw;
+        height: 7vw;
+    }
+
+    #contenedor_post{
+        margin-top: 10vh;
+        width: 90vw;
+        height: auto;
+    }
+
+   .texto_post{
+        padding-top: 1.2vw;
+    }
+
+    #input_titulo::placeholder{
+        padding-left: 2vw;
+    }
+
+    #textarea{
+        padding: 2vh 3vw;
+        margin-top: 5vh;
+    }
+}
+
+@media screen and (max-width:1000px){
+    body{
+        height: 170vh;
+        overflow-y: scroll;
+    }
+
+    #imagen_superior img{
+        height: 20vh;
+        overflow: hidden;
+    }
+
+    #contenedor_perfil_form{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 80vh;
+    }
+
+    #perfil{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    #perfil img{
+        height: 20vh;
+        width: 20vh;
+    }
+
+    .texto_perfil{
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        height: 15vh;
+    }
+
+    #descripcion{
+        text-align: center;
+        width: 80vw;
+    }
+    #formulario{
+        padding: 0;
+        margin: 7vh 0 0 0;
+        width: 90vw;
+        height: 60vh;
+    }
+
+    #boton{
+        margin-top: 7vh;
+        align-self: center;
+    }
+
+    #texto_entrada{
+        margin-top: 7vh;
+        padding-top: 7vh;
+    }
+
+    #foto_post{
+        width: 7vw;
+        height: 7vw;
+    }
+
+    #contenedor_post{
+        margin-top: 10vh;
+        width: 90vw;
+        height: auto;
+    }
+
+   .texto_post{
+        padding-top: 1.2vw;
+    }
+
+    #input_titulo::placeholder{
+        padding-left: 2vw;
+    }
+
+    #textarea{
+        padding: 2vh 3vw;
+        margin-top: 5vh;
+    }
+
+}

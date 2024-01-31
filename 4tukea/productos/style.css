@@ -1,0 +1,168 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+
+body{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+header{
+    width: 100vw;
+}
+
+.logo{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    height: 20vh;
+}
+
+nav{
+    width: 100%;
+    background-color: #EDEDED;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 160px;
+    font-weight: 400;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+#contenedor_tarjetas{
+    width: 100vw;
+    height: 59vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer{
+    height: 11vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #EDEDED;
+}
+
+.tarjeta_producto{
+    position: relative;
+    border-radius: 20px;
+    height: 45vh;
+    width: 20vw;
+    box-shadow: 0px 5px 3px 1px rgba(0, 0, 0, 0.148);
+    overflow: hidden;
+    
+}
+article img {
+    width: 100%;
+    transition: .5s;
+}
+
+.tarjeta_producto:hover img{
+    transform: scale(1.1);
+    filter: brightness(0.85);
+}
+
+.contenedor_texto{
+    position: absolute;
+    height: 85px;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 30px;
+    padding: 0 10px;
+    background-color: white;
+}
+
+.precio{
+    color: blueviolet;
+}
+
+.precio_y_btn{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btn_ver{
+    background-color: #14C9E1;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9vw;
+    padding: 0 10px;
+    border-radius: 40px;
+    transition: .3s;
+}
+
+.btn_ver:hover{
+    filter: brightness(.9);
+}
+
+.fa-instagram{
+    font-size: 30px;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+#contenedor_términos_condiciones{
+    width: 35vw;
+    height: 75vh;
+    padding: 3vh 3vw;
+    position: absolute;
+    background-color: #F8F8F8;
+    overflow-y: scroll;
+    border-radius: 2rem;
+    box-shadow: 0 7px 5px 0 rgba(0, 0, 0, 0.234);
+}
+#contenedor_términos_condiciones::-webkit-scrollbar {
+    display: none;
+}
+#texto_terminos{
+    border: solid;
+}
+
+#texto_terminos p, h2{
+    margin-bottom: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu_movil{
+    display: none;
+}
+
+#check, label{
+    display: none;
+}
+

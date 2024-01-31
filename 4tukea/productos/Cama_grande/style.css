@@ -1,0 +1,126 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+body{
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+header{
+    width: 100vw;
+}
+
+.logo{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    height: 20vh;
+}
+
+nav{
+    width: 100%;
+    background-color: #EDEDED;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 160px;
+    font-weight: 400;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 11vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #EDEDED;
+}
+
+.fa-instagram{
+    font-size: 30px;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.precio{
+    color: blueviolet;
+}
+
+#precio_y_btn{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 3vh;
+}
+
+.btn_comprar{
+    background-color: #14C9E1;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9vw;
+    padding: 0 10px;
+    border-radius: 40px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn_comprar:hover{
+    filter: brightness(.9);
+}
+
+#presentacion_producto{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 59vh;
+    padding: 5vh 10vw 0 10vw;
+
+}
+
+#presentacion_producto img{
+    height: 35vh;
+    margin-right: 2.5vw;
+}
+
+#descripcion_boton{
+    height: 35vh;
+    margin-left: 2.5vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+#titulo{
+    font-size: 4vh;
+    font-weight: 700;
+}
+

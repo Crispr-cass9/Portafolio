@@ -1,3 +1,16 @@
+class carrito{
+
+    constructor(elemento, costo){
+        this.elemento = elemento;
+        this.costo = costo
+        this.carrito = {elemento: costo}
+        this.total = 0
+    }
+
+    agregar_elemento(elemento, costo) {
+    }
+}
+
 let btn = document.querySelectorAll('.btn_siguiente');
 let btn_volver = document.querySelectorAll('.btn_volver')
 let ubicacion = [1, 2, 3, 4]
@@ -5,30 +18,44 @@ actual=0
 
 let primer_paso = document.getElementById('contenedor_formulario_info')
 let segundo_paso = document.getElementById('contenedor_formulario_suscripcion')
+let tercer_paso = document.getElementById('contenedor_formulario_extras')
 let numeros_pasos = document.querySelectorAll('.numero')
 
 btn.forEach(element => {
     element.addEventListener('click', ()=>{
         actual++
         if (actual == 0){
-            // primer_paso.style.display ='flex'
-            // segundo_paso.style.display ='none'
+            primer_paso.style.display ='flex'
+            segundo_paso.style.display ='none'
+            tercer_paso.style.display ='none'
             btn_volver[0].classList.remove('mostrar')
             btn_volver[1].classList.remove('mostrar')
             btn_volver[2].classList.remove('mostrar')
-
-            console.log(btn_volver)
+            btn_volver[3].classList.add('mostrar')
 
         }
 
         if (actual == 1){
-            // primer_paso.style.display='none'
-            // segundo_paso.style.display='flex'
+            primer_paso.style.display='none'
+            segundo_paso.style.display='flex'
+            tercer_paso.style.display ='none'
             btn_volver[0].classList.remove('mostrar')
             btn_volver[1].classList.add('mostrar')
             btn_volver[2].classList.add('mostrar')
+            btn_volver[3].classList.add('mostrar')
 
-            console.log(btn_volver)
+
+        }
+
+        if (actual == 2){
+            primer_paso.style.display='none'
+            segundo_paso.style.display='none'
+            tercer_paso.style.display ='flex'
+            btn_volver[0].classList.remove('mostrar')
+            btn_volver[1].classList.add('mostrar')
+            btn_volver[2].classList.add('mostrar')
+            btn_volver[3].classList.add('mostrar')
+            comprobar_mensual(mensual)
         }
 
 
@@ -45,24 +72,36 @@ btn_volver.forEach(element => {
     element.addEventListener('click', ()=>{
         actual--
         if (actual == 0){
-            // primer_paso.style.display='flex'
-            // segundo_paso.style.display='none'
+            primer_paso.style.display='flex'
+            segundo_paso.style.display='none'
+            tercer_paso.style.display ='none'
             btn_volver[0].classList.remove('mostrar')
             btn_volver[1].classList.remove('mostrar')
             btn_volver[2].classList.remove('mostrar')
-            console.log(btn_volver)
+            btn_volver[3].classList.add('mostrar')
 
         }
 
         if (actual == 1){
-            // primer_paso.style.display='none'
-            // segundo_paso.style.display='flex'
+            primer_paso.style.display='none'
+            segundo_paso.style.display='flex'
+            tercer_paso.style.display ='none'
             btn_volver[0].classList.remove('mostrar')
             btn_volver[1].classList.add('mostrar')
             btn_volver[2].classList.add('mostrar')
+            btn_volver[3].classList.add('mostrar')
 
-            console.log(btn_volver)
+        }
 
+        if (actual == 2){
+            primer_paso.style.display='none'
+            segundo_paso.style.display='none'
+            tercer_paso.style.display ='flex'
+            btn_volver[0].classList.remove('mostrar')
+            btn_volver[1].classList.add('mostrar')
+            btn_volver[2].classList.add('mostrar')
+            btn_volver[3].classList.add('mostrar')
+            comprobar_mensual(mensual)
         }
 
         numeros_pasos.forEach(numero => {
@@ -124,7 +163,6 @@ validacion = (evento) => {
                 document.getElementById('numero').classList.remove('input_invalido')
             }
             else{
-                console.log(evento.target)
                 document.getElementById('entrada_numero').classList.add('mensaje_invalido')
                 document.getElementById('icono_error_numero').classList.add('mostrar')
                 document.getElementById('numero').classList.add('input_invalido')
@@ -150,12 +188,13 @@ let texto_mensual = document.querySelector('.texto_mensual')
 let texto_anual = document.querySelector('.texto_anual')
 let precios = document.querySelectorAll('.precio_plan')
 let ofertas = document.querySelectorAll('.oferta')
-mensual=true;
+let mensual=true;
 
 let contenedores_planes = document.querySelectorAll('.planes')
 
 contenedores_planes.forEach((element, index) => {
-    element.addEventListener('click', ()=>{
+    element.addEventListener('click', (e)=>{
+        console.log(e)
         element.classList.add('plan_seleccionado')
         contenedores_planes[(index+1)%3].classList.remove('plan_seleccionado')
         contenedores_planes[(index+2)%3].classList.remove('plan_seleccionado')
@@ -198,3 +237,42 @@ mensual_o_anual.addEventListener('click', ()=>{
         
     }
 })
+
+// Código de menú extras
+
+let botones_extras = document.querySelectorAll(".btn_extras")
+let contenedores_extras = document.querySelectorAll(".extra")
+let precios_extras = document.querySelectorAll(".precio_extra")
+
+function comprobar_mensual(mensual){
+    if (mensual){
+        precios_extras[0].innerHTML="$1/mes"
+        precios_extras[1].innerHTML="$2/mes"
+        precios_extras[2].innerHTML="$2/mes"
+    
+    }
+    else{
+        precios_extras[0].innerHTML="$10/año"
+        precios_extras[1].innerHTML="$20/año"
+        precios_extras[2].innerHTML="$20/año"
+    }
+}
+
+
+contenedores_extras.forEach((extra, index) => {
+    console.log(extra)
+    extra.addEventListener('click', () => {
+        botones_extras[index].checked=!botones_extras[index].checked
+        if (botones_extras[index].checked){
+            contenedores_extras[index].classList.add('extra_seleccionado')
+        }
+        else{
+            contenedores_extras[index].classList.remove('extra_seleccionado')
+        }
+    })
+});
+
+function comprobar_selecciones(lista) {
+    
+}
+

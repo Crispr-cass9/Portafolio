@@ -1,0 +1,143 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+body{
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+header{
+    width: 100vw;
+}
+
+.logo{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    height: 20vh;
+}
+
+nav{
+    width: 100%;
+    background-color: #EDEDED;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 160px;
+    font-weight: 400;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #EDEDED;
+}
+
+.btn_enviar{
+    background-color: #14C9E1;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9vw;
+    padding: 0 2rem;
+    border-radius: 40px;
+    transition: .3s;
+    align-self: flex-end;
+    margin-top: 1rem;
+}
+
+.btn_enviar:hover{
+    filter: brightness(.9);
+}
+
+.fa-instagram{
+    font-size: 30px;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+#contenedor_formulario{
+    height: 59vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10vw;
+}
+#contenedor_formulario img{
+    width: 30vw;
+}
+
+#formulario{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 32vw;
+    height: 60vh;
+}
+#formulario span{
+    text-align: center;
+    font-size: 2vw;
+}
+
+#formulario div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#formulario div input{
+    width: 40%;
+    padding: .5vh 1vw;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;    
+    background-color: #F8F8F8;
+}
+
+#formulario input{
+    margin: 2vh;
+    padding: .5vh 1vw;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;    
+    background-color: #F8F8F8;
+}
+
+#textarea{
+    margin: 2vh;
+    padding: 1vh 1vw;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;    
+    background-color: #F8F8F8;
+    resize: none;
+}

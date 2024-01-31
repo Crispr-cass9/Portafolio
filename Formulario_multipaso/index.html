@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favico2n-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Multi-step form</title>
@@ -164,40 +164,49 @@
     </div>
 
     <div id="contenedor_formulario_extras">
-      <h1 class="titulo">Selecciona add-ons</h1>
+      <h1 class="titulo titulo_extras">Selecciona add-ons</h1>
       <h3 class="subtitulo">Los add-ons mejoran tu experiencia de usuario</h3>
 
       <div class="contenedor_de_extras">
-        <div class="servicio_online extra">
-          <input type="checkbox" id="check_online">
-          <div class="texto_extra">
-            <span>servicio online</span>
-            <span>Acceso al multijugador</span>
+          <div class="servicio_online extra">
+            <input type="checkbox" id="check_online" class="btn_extras">
+            <div class="texto_extra">
+              <span>servicio online</span>
+              <span>Acceso al multijugador</span>
+            </div>
+            <div class="precio_extra">+$1/mes</div>
           </div>
-          <div class="precio">+$1/mes</div>
-        </div>
+        
+
+          <div class="almacenamiento_grande extra">
+            <input type="checkbox" id="check_almacenamiento" class="btn_extras">
+            <div class="texto_extra">
+              <span>Nube pro</span>
+              <span>1TB en la nube</span>
+            </div>
+            <div class="precio_extra">+$2/mes</div>
+          </div>
+
+          <div class="perfil_custom extra">
+            <input type="checkbox" id="check_perfil" class="btn_extras">
+            <div class="texto_extra">
+              <span>Perfil custom</span>
+              <span>Skins exclusivas para perfil</span>
+            </div>
+            <div class="precio_extra">+$2/mes</div>
+          </div>
       </div>
 
-      <div class="almacenamiento_grande extra">
-        <input type="checkbox" id="check_almacenamiento">
-        <div class="texto_extra">
-          <span>Almacenamiento grande</span>
-          <span>1 TB Extra de almacenamiento en la nube</span>
-        </div>
-        <div class="precio">+$2/mes</div>
+      <div class="contenedor_boton_pc">
+        <button class="btn_volver">Volver</button>
+        <button form="formulario_info" class="btn_siguiente" type="submit">Siguiente</button>
       </div>
+      
+  </div>
 
-      <div class="perfil_custom extra">
-        <input type="checkbox" id="check_perfil">
-        <div class="texto_extra">
-          <span>Perfil personalizable</span>
-          <span>Skins exclusivas para tu perfil</span>
-        </div>
-        <div class="precio">+$2/mes</div>
-      </div>
+  <div>
 
-    </div>
-    
+  </div>
       <div class="contenedor_boton_movil">
         <button class="btn_volver">Volver</button>
         <button form="formulario_info" class="btn_siguiente" type="submit">Siguiente</button>

@@ -146,7 +146,7 @@
 
 .contenedor_boton_movil{
     position: absolute;
-    width: 100vw;
+    width: 95vw;
     height: 10vh;
     bottom: 0;
     display: flex;
@@ -299,11 +299,13 @@
 }
 
 .plan_seleccionado{
-    background-color: var(--Alabaster);
+    background-color: var(--Magnolia);
     border-color: var(--Purplish_blue);
 }
 
 /*Inicio de menu de add-ons (Extras)*/
+
+
 #contenedor_formulario_extras{
     position: absolute;
     top: 15vh;
@@ -320,22 +322,68 @@
 .contenedor_de_extras{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    margin-top: 5vh;
+    height: 40vh;
 }
 
 .extra{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: solid var(--Light_gray) 1px;
+    padding: 2vh;
+    border-radius: 0.5rem;
 }
 
+
+
 .texto_extra{
+    width: 70%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
 }
 
+.texto_extra span:first-child{
+    font-weight: 900;
+    color: var(--Marineblue);
+    font-size: 3vh;
+}
+
+.texto_extra span:last-child{
+    margin-top: 0.8vh;
+    font-weight: 400;
+    font-size: 2.5vh;
+    color: var(--Cool_gray);
+}
+
+.precio_extra{
+    font-size: 2.3vh;
+    font-weight: 900;
+    color: var(--Purplish_blue);
+} 
+
+.btn_extras {
+	content: "";
+	width: 3.5vh;
+    height: 3.5vh;
+	float: left;
+	margin: 0.5em 0.5em 0 0;
+	border: 2px solid #ff0000;
+	background-color: #fff;
+}
+
+.extra_seleccionado{
+    background-color: var(--Magnolia);
+    border-color: var(--Purplish_blue);
+}
+
+.titulo_extras{
+    font-size: 4vh;
+}
 
 
 
@@ -404,7 +452,7 @@
     }
 
     .planes{
-        height: 11vh;
+        height: 10vh;
     }
 
     .contenedor_texto_planes{
@@ -416,6 +464,34 @@
 
     #mensual_anual{
         font-size: 2.3vh;
+    }
+
+/* Inicio código de extras */
+
+    #contenedor_formulario_extras{
+        top: 18vh;
+        height: 62vh;
+    }
+
+    .contenedor_de_extras{
+        height: 38vh;
+    }
+
+    input[type='checkbox']{
+        height: 2vh;
+        width: 2vh;
+    }
+
+    .texto_extra span:first-child{
+        font-size: 2.7vh;
+    }
+    
+    .texto_extra span:last-child{
+        font-size: 2vh;
+    }
+
+    .precio_extra{
+        font-size: 2vh;
     }
 
 }
@@ -544,7 +620,7 @@
     .contenedor_boton_pc{
         display: flex;
         justify-content: space-between;
-        width: 96%;
+        width: 90%;
         align-self: flex-end;
         position: absolute;
         bottom: 5%;
@@ -643,13 +719,25 @@
         transform: translateX(3.2vw) !important;
     }
     
+    /* Inicio de menu de Add-ons (extras) */
+
+    #contenedor_formulario_extras{
+        width: 65%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        box-shadow: none;
+        padding: 2rem;
+    }
+
+    .contenedor_de_extras{
+        width: 28vw;
+        height: 35vh;
+    }
+
 
 }
 
-#contenedor_formulario_info{
-    display: none;
-}
-
-#contenedor_formulario_suscripcion{
+#contenedor_formulario_extras{
     display: none;
 }

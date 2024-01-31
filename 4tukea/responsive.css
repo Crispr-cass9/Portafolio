@@ -1,0 +1,346 @@
+@media screen and (width<=780px){
+
+
+    .logo{
+        height: 15vh;
+        font-size: 5vh;
+        background-color: white;
+        position: sticky;
+        top: -20vh;
+    }
+
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 20;
+    }
+
+
+    #check{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    label{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+
+    #menu_movil{
+        z-index: 20;
+        position: fixed;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        transition: 1s ease-in-out;
+        left: 100%;
+        top: 24.9vh;
+        height: 40vh;
+        width: 100vw;
+        background-color: rgb(255, 255, 255);
+        padding: 0;
+    }
+
+    #menu_movil li{
+        width: 100vw;
+        padding: 2vh 0 2vh 0;
+        text-align: center;
+        border-bottom: rgba(0, 0, 0, 0.301) solid 1px;
+    }
+
+    .link_pc{
+        display: none;
+    }
+
+    .fa-bars{
+        font-size: 5vh;
+
+    }
+    #check:checked ~ #menu_movil{
+        left: 0;
+    }
+
+    #contenedor_tarjetas{
+        margin: 10vh 0 20vh 0;
+        padding: 2vh 0;
+        height: 150vh;
+        display: flex;
+        flex-flow: column nowrap;
+        overflow-y: scroll;
+        justify-content: space-between;
+    }
+
+    .contenedor_texto{
+        bottom: 0;
+    }
+
+    .tarjeta_producto{
+        width: 80vw;
+        height: 45vh;
+    }
+
+
+    footer{
+        font-size: 1.5vh;
+        height: 8vh;
+        z-index: 20;
+    }
+
+    .btn_ver{
+        font-size: 2vh;
+    }
+
+
+
+
+
+
+
+
+
+    /* Estilos inicio */
+    
+    
+    #contenedor_img_lorem{
+        padding-top: 5vh;
+    }
+
+    #contenedor_img_lorem img{
+        transform: scale(2.5);
+        z-index: -10;
+    }
+
+    #contenedor_img_lorem p {
+        font-size: 1.5vh;
+        width: 90vw;
+    }
+    
+
+
+
+
+
+
+
+    /* Estilos contacto */
+    
+    
+    #contenedor_formulario{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 150vh;
+        padding: 5vh;
+    }
+    
+    
+    #contenedor_formulario img{
+        width: 80vw;
+    }
+
+    #formulario{
+        width: 90vw;
+    }
+
+    #formulario span{
+        font-size: 3vh;
+    }
+
+    #formulario div input{
+        padding-left: 5vw;
+    }
+
+    #formulario input{
+        padding-left: 5vw;
+    }
+
+    #textarea{
+        padding-left: 5vw;
+    }
+    #contenedor_formulario .btn_enviar{
+        font-size: 1.5vh;
+    }
+
+    input{
+        padding-left: 5vw;
+    }
+
+
+    
+    /* Animación cuadrado del menu */
+    .cuadradoCentrado {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contenedorIconoMenu {
+        position: relative;
+        height: 10vh;
+        width: 10vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .lineas {
+        position: absolute;
+        width: 60%;
+        height: 8%;
+        top: 50%;
+        left: 20%;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .linea1 {
+        top: 30%;
+        z-index: 1;
+    }
+
+    .linea2 {
+        z-index: 20;
+    }
+
+    .linea3 {
+        z-index: 10;
+        top: 70%;
+    }
+
+    .animacionLinea1{
+        animation-name: linea1Animacion;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-direction: normal;
+    }
+
+
+    @keyframes linea1Animacion {
+        0%{
+            transform: translateY(0);
+        }
+
+        50%{
+            transform: translateY(250%);
+        }
+        100% {
+            transform: translateY(250%) rotate(-225deg);
+        }
+    }
+
+    .revertir1 {
+        animation-name: linea1RevertirAnimacion;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes linea1RevertirAnimacion {
+        0% {
+            transform: translateY(250%) rotate(-225deg);
+        }
+
+        50% {
+            transform: translateY(250%) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(0) rotate(225);
+        }
+    }
+
+
+    .animacionLinea2{
+        animation-name: linea2Animacion;
+        animation-duration: .5s;
+        animation-delay: .5s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes linea2Animacion {
+        0%{ transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-225deg);
+        }
+        
+    }
+
+    .revertir2 {
+        rotate: -225deg;
+        animation-name: linea2RevertirAnimacion;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes linea2RevertirAnimacion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(225deg);
+        }
+
+        100% {
+            transform: rotate(225deg) translateY(0px);
+        }
+    }
+
+    .animacionLinea3 {
+        animation: linea3Animacion 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .revertir3 {
+        animation-name: linea3RevertirAnimacion;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes linea3RevertirAnimacion {
+        0% {
+            transform: translateY(-250%) rotate(45deg);
+
+        }
+
+        50% {
+            transform: translateY(-250%) rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(0deg) translateY(0);
+        }
+    }
+
+    @keyframes linea3Animacion {
+        0%{
+            transform: translateY(0px);
+        }
+
+        50%{
+            transform: translateY(-250%);
+        }
+
+        100% {
+            transform: translateY(-250%) rotate(45deg);
+        }
+    }
+
+}
