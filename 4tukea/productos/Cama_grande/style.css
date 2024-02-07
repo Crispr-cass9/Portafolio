@@ -124,3 +124,14 @@ footer a:hover{
     font-weight: 700;
 }
 
+#check{
+    display: none;
+}
+
+nav label{
+    display: none;
+}
+
+#menu_movil{
+    display: none;
+}

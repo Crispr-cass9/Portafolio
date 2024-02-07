@@ -141,3 +141,15 @@ footer a:hover{
     background-color: #F8F8F8;
     resize: none;
 }
+
+#check{
+    display: none;
+}
+
+nav label{
+    display: none;
+}
+
+#menu_movil{
+    display: none;
+}

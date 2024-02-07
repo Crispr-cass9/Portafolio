@@ -166,3 +166,14 @@ footer a:hover{
     display: none;
 }
 
+#check{
+    display: none;
+}
+
+nav label{
+    display: none;
+}
+
+#menu_movil{
+    display: none;
+}

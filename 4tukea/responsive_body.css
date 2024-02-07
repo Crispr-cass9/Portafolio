@@ -10,7 +10,7 @@
     }
 
     body{
-        height: 140vh;
+        height: 200vh;
     }
 
     #presentacion_producto{
@@ -47,7 +47,7 @@
     }
 
     .btn_comprar{
-        font-size: 2.3vh;
+        font-size: 2.7vh;
     }
 
     header{
@@ -119,9 +119,9 @@
     }
 
     #contenedor_tarjetas{
-        margin: 10vh 0 20vh 0;
+        margin: 5vh 0 15vh 0;
         padding: 2vh 0;
-        height: 150vh;
+        height: 180vh;
         display: flex;
         flex-flow: column nowrap;
         overflow-y: scroll;
@@ -147,78 +147,6 @@
     .btn_ver{
         font-size: 2vh;
     }
-
-
-
-
-
-
-    /* Estilos inicio */
-    
-    
-    #contenedor_img_lorem{
-        padding-top: 5vh;
-    }
-
-    #contenedor_img_lorem img{
-        transform: scale(2.5);
-        z-index: -10;
-    }
-
-    #contenedor_img_lorem p {
-        font-size: 1.5vh;
-        width: 90vw;
-    }
-    
-
-
-
-
-
-
-
-    /* Estilos contacto */
-    
-    
-    #contenedor_formulario{
-        display: flex;
-        flex-flow: column nowrap;
-        height: 150vh;
-        padding: 5vh;
-    }
-    
-    
-    #contenedor_formulario img{
-        width: 80vw;
-    }
-
-    #formulario{
-        width: 90vw;
-    }
-
-    #formulario span{
-        font-size: 3vh;
-    }
-
-    #formulario div input{
-        padding-left: 5vw;
-    }
-
-    #formulario input{
-        padding-left: 5vw;
-    }
-
-    #textarea{
-        padding-left: 5vw;
-    }
-    #contenedor_formulario .btn_enviar{
-        font-size: 1.5vh;
-    }
-
-    input{
-        padding-left: 5vw;
-    }
-
 
     
     /* Animación cuadrado del menu */

@@ -106,3 +106,15 @@ footer a:hover{
 img{
     width: 13vw;
 }
+
+#check{
+    display: none;
+}
+
+nav label{
+    display: none;
+}
+
+#menu_movil{
+    display: none;
+}
